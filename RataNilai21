@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class RataNilai21 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int totalNilai, nilai;
+        double rataRata;
+        int count = 1;
+
+        
+        while (count <= 5) {
+            totalNilai = 0; 
+
+            for (int i = 0; i < 5; i++) {
+                System.out.print("Masukkan nilai mahasiswa ke-" + (i+1) + ": ");
+                nilai = sc.nextInt();
+                totalNilai += nilai;
+            }
+            rataRata = totalNilai / 5.0;
+            System.out.println("Rata-rata nilai mahasiswa ke-" + count + ": " + rataRata);
+            
+            count++;
+        }
+
+        sc.close();
+    }
+}
